@@ -21,7 +21,7 @@ const About = () => {
   }
 
   return (
-    <Container fluid className='about'>
+    <Container fluid className='about py-5'>
       { /* About Section */ }
       <h1 className="heading"> about <span>me</span></h1>
       <Row className='Row'>

@@ -348,7 +348,6 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
 }
 .Row .info-container h1 {
   font-size: 3rem;
@@ -363,11 +362,49 @@ html::-webkit-scrollbar-thumb {
   padding: 1rem 0;
 }
 .Row .info-container .box-container {
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 .Row .info-container .box-container .box {
   display: flex;
   gap: 2rem;
+  padding: 1rem 0;
+}
+.Row .info-container .box-container .box h3 {
+  font-size: 3rem;
+  color: #fff;
+}
+.Row .info-container .share a {
+  font-size: 2rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  padding: 1rem;
+  line-height: 4.5rem;
+  border-radius: 50%;
+  background: #1a1a1a;
+  color: #fff;
+  margin-right: 1.7rem;
+}
+.Row .info-container .share a:hover {
+  background: crimson;
+}
+.Row form .inputBox input, .Row form .inputBox textarea {
+  border-radius: 1rem;
+  padding: 1.2rem 1.8rem;
+  font-size: 1.6rem;
+  color: crimson !important;
+  background: #1a1a1a;
+  text-transform: uppercase;
+  outline: crimson;
+  border: 1px solid crimson;
+}
+.Row form .inputBox textarea {
+  width: 100%;
+  border-radius: 1rem;
+  resize: none;
+  height: 25rem;
+}
+.Row form .inputBox .btn {
+  padding: 2rem 1rem;
 }
 
 @media (max-width: 1200px) {

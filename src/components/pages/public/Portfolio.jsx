@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
   return (
-    <Container fluid className='portfolio px-3 pb-5'>
+    <Container fluid className='portfolio px-3 py-5'>
       <h1 className="heading"><span>my</span> works</h1>
       <Row className="box-container m-0">
         <Col className="box">

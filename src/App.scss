@@ -415,7 +415,7 @@ html {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    //gap: 2rem;
 
     .info-container {
         //width: 30rem;
@@ -435,11 +435,61 @@ html {
         }
 
         .box-container {
-            padding: 1rem 0;
+            padding: 2rem 0;
 
             .box {
                 display: flex;
                 gap: 2rem;
+                padding: 1rem 0;
+
+                h3 {
+                    font-size: 3rem;
+                    color: $white;
+                }
+            }
+        }
+
+        .share {
+            a {
+                font-size: 2rem;
+                height: 4.5rem;
+                width: 4.5rem;
+                padding: 1rem;
+                line-height: 4.5rem;
+                border-radius: 50%;
+                background: $light-bg;
+                color: $white;
+                margin-right: 1.7rem;
+
+                &:hover {
+                    background: $crimson;
+                }
+            }
+        }
+    }
+
+    form {
+        .inputBox {
+            input, textarea {
+                border-radius: 1rem;
+                padding: 1.2rem 1.8rem;
+                font-size: 1.6rem;
+                color: $crimson !important;
+                background: $light-bg;
+                text-transform: uppercase;
+                outline: $crimson;
+                border: 1px solid $crimson;
+            }
+
+            textarea {
+                width: 100%;
+                border-radius: 1rem;
+                resize: none;
+                height: 25rem;
+            }
+
+            .btn {
+                padding: 2rem 1rem;
             }
         }
     }

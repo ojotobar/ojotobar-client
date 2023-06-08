@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarker, FaPhone, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaPhone, FaTwitter } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Contact = () => {
@@ -13,17 +13,23 @@ const Contact = () => {
     paddingTop: '.5rem'
   }
 
+  const btnStyles = {
+    background: 'crimson',
+    padding: '1rem 2rem',
+    border: 'none',
+    outline: 'none',
+    fontSize: '1.7rem'
+  }
+
   return (
-    <Container fluid className='contact'>
+    <Container fluid className='contact py-3'>
       <h1 className="heading">contact <span>me</span></h1>
-      <Row className='Row'>
-        <Col style={{background: 'red'}} md>Hi</Col>
-        <Col style={{background: 'blue'}} md>Hello</Col>
-        {/* <Col md={12} lg={6} className='info-container'>
+      <Row className='Row px-5'>
+        <Col className='mb-3 info-container' sm={12} md={6} lg={5}>
           <h1>get in touch</h1>
           <Col className="box-container">
             <Col className="box">
-              <FaMapMarker style={styles}/>
+              <FaMapMarkerAlt style={styles}/>
               <Col className="info">
                 <h3>address: </h3>
                 <p>Lagos, Nigeria - 601232</p>
@@ -59,11 +65,11 @@ const Contact = () => {
             </Link>
           </Col>
         </Col>
-        //Form section
-        <Col md={12} lg={6}>
+        { /* Form Section */}
+        <Col className='mb-3' sm={12} md={6} lg={7}>
           <Form className=''>
             <Row className="">
-              <Col className='mb-2' xl={12}>
+              <Col className='mb-3 inputBox' xl={12}>
                 <Form.Group>
                   <Form.Control
                       type="text"
@@ -74,7 +80,7 @@ const Contact = () => {
                   />
                 </Form.Group>
               </Col>
-              <Col className='mb-2' xl={12}>
+              <Col className='mb-3 inputBox' xl={12}>
                 <Form.Group>
                   <Form.Control
                       type="email"
@@ -85,7 +91,7 @@ const Contact = () => {
                   />
                 </Form.Group>
               </Col>
-              <Col className='mb-2' xl={12}>
+              <Col className='mb-3 inputBox' xl={12}>
                 <Form.Group>
                   <Form.Control
                       type="phone"
@@ -97,8 +103,8 @@ const Contact = () => {
                 </Form.Group>
               </Col>
             </Row>
-            <Row className="mb-1">
-              <Form.Group as={Col} className='mb-2'>
+            <Row className="mb-2">
+              <Form.Group as={Col} className='mb-2 inputBox'>
                 <Form.Control
                   required
                   as='textarea'
@@ -110,11 +116,14 @@ const Contact = () => {
                 <Form.Control.Feedback type="invalid">This field is required!</Form.Control.Feedback>
               </Form.Group>
             </Row>
-            <Row className="mb-3">
-              <Button type="submit" className=''>Send Message</Button>
+            <Row className="">
+              <Col xs={12} sm={6} md={6} lg={4}>
+                <Button type="submit" className='w-100' style={btnStyles}>Send Message</Button>
+              </Col>
+              <Col xs={0} sm={6} md={6} lg={8}></Col>
             </Row>
           </Form>
-        </Col> */}
+        </Col>
       </Row>
     </Container>
   )
