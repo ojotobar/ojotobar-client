@@ -16,6 +16,7 @@ $black: #0d0d0d;
 $light-bg: #1a1a1a;
 $white: #fff;
 $light-color: #aaa;
+$lighter-bg: #1d1d1d;
 $box-shadow: 0.5rem 1rem rgba(0, 0, 0, .7);
 
 @mixin grid($val) {
@@ -75,13 +76,11 @@ html {
 
 .App {
     background: $black;
-    //padding-bottom: 6.5rem;
     min-height: 90vh;
     margin: 0;
 }
 
 .navbar {
-    //position: fixed;
     background: $light-bg;
     bottom: 0;
     margin: 0 !important;
@@ -124,7 +123,6 @@ html {
 }
 
 .Btn {
-    //display: inline-block;
     margin-top: 1.7rem;
     border-radius: 5rem;
     background: $crimson !important;
@@ -415,11 +413,8 @@ html {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    //gap: 2rem;
 
     .info-container {
-        //width: 30rem;
-
         h1 {
             font-size: 3rem;
             text-transform: uppercase;
@@ -475,7 +470,7 @@ html {
                 padding: 1.2rem 1.8rem;
                 font-size: 1.6rem;
                 color: $crimson !important;
-                background: $light-bg;
+                background: $lighter-bg;
                 text-transform: uppercase;
                 outline: $crimson;
                 border: 1px solid $crimson;
