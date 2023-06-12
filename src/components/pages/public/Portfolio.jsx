@@ -5,19 +5,26 @@ import Image from 'react-bootstrap/Image';
 import { useSelector } from 'react-redux';
 import { useGetUserProjectsQuery } from '../../../features/api/projectApi';
 import CustomSpinner from '../../common/CustomSpinner';
+import { Alert } from 'react-bootstrap';
 
 const Portfolio = () => {
   const { userId } = useSelector((state) => state.auth);
-  const { data: projects, isLoading } = useGetUserProjectsQuery(userId);
+  const { data: projects, isLoading, isError } = useGetUserProjectsQuery(userId);
+
   return (
     <Container fluid className='portfolio px-3 py-5'>
       <h1 className="heading"><span>my</span> works</h1>
       <Row className="box-container m-0">
         { isLoading ? 
           <CustomSpinner /> :
+          isError ?
+          <Alert variant="danger" className="text-center">
+            <Alert.Heading>Error</Alert.Heading>
+            <p>There was an error loading resources. Please reload.</p>
+          </Alert> :
           <>
             { projects && projects.map(proj => (
-              <Col className="box">
+              <Col key={proj?._id} className="box">
                 <Image 
                   src={proj?.pageUrl}
                   fluid

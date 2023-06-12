@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { toEmailLink } from '../../../helpers/settings'
 
 const Info = ({ info, stats }) => {
   return (
@@ -8,7 +9,7 @@ const Info = ({ info, stats }) => {
         <Col className="box-container">
         <Col className='box'>
             <h3><span>name:</span> {info?.lastName} {info?.firstName} {info?.middleInitial}</h3>
-            <h3><span>email:</span> {info?.email}</h3>
+            <h3><span>email:</span><a href={toEmailLink(info?.email)}> {info?.email}</a></h3>
             { info?.address ?
             <h3><span>address:</span> {info?.address}</h3> :
             <></>

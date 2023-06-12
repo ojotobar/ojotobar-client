@@ -12,21 +12,26 @@ import Skill from './Skill';
 import Education from './Education';
 import { useGetUserExperienceQuery } from '../../../features/api/experienceApi';
 import Experience from './Experience';
+import { Alert } from 'react-bootstrap';
 
 const About = () => {
   const { userId } = useSelector((state) => state.auth);
-  const { data: stats, isLoading } = useGetUserStatsQuery(userId);
-  const { data: info, isLoading: isInfoLoading } = useGetPersonalInfoQuery(userId);
-  const { data: educations, isLoading: isEduLoading } = useGetUserEducationQuery(userId);
-  const { data: skills , isLoading: isSkillLoading} = useGetUserSkillsQuery(userId);
-  const { data: experiences, isLoading: isExpLoading } = useGetUserExperienceQuery(userId);
-
+  const { data: stats, isLoading, isError } = useGetUserStatsQuery(userId);
+  const { data: info, isLoading: isInfoLoading, isError: isInfoError } = useGetPersonalInfoQuery(userId);
+  const { data: educations, isLoading: isEduLoading, isError: isEduError } = useGetUserEducationQuery(userId);
+  const { data: skills , isLoading: isSkillLoading, isError: isSkillError} = useGetUserSkillsQuery(userId);
+  const { data: experiences, isLoading: isExpLoading, isError: isExpError } = useGetUserExperienceQuery(userId);
+  
   return (
     <Container fluid className='about py-5'>
-      { /* About Section */ }
       <h1 className="heading"> about <span>me</span></h1>
       { isLoading || isInfoLoading || isEduLoading || isSkillLoading || isExpLoading ?
         <CustomSpinner /> :
+        (isError || isInfoError || isEduError || isSkillError || isExpError) ?
+        <Alert variant="danger" className="text-center">
+          <Alert.Heading>Error</Alert.Heading>
+          <p>There was an error loading resources. Please reload.</p>
+        </Alert> :
         <>
           <Row className='Row'>
             <Col className='info p-5'>
@@ -42,7 +47,7 @@ const About = () => {
             <h1 className="heading"><span>my </span>skills</h1>
             <Row className="box-container m-0 px-5">
               { skills && skills.map(skill => (
-                <Skill skill={skill} />
+                <Skill key={skill?._id} skill={skill} />
               ))}
             </Row>
           </Row>
@@ -51,7 +56,7 @@ const About = () => {
             <h1 className="heading"><span>work</span> Experience</h1>
             <Row className="box-container m-0 px-5">
               { experiences && experiences.map(exp => (
-                <Experience exp={exp} />
+                <Experience key={exp?._id} exp={exp} />
               ))}
             </Row>
           </Row>
@@ -60,7 +65,7 @@ const About = () => {
             <h1 className="heading"><span>my</span> Education</h1>
             <Row className="box-container m-0 px-5">
               { educations && educations.map(edu => (
-                <Education edu={edu} />
+                <Education key={edu?._id} edu={edu} />
               ))}
             </Row>
           </Row>

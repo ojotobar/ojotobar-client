@@ -7,16 +7,22 @@ import CustomSpinner from '../../common/CustomSpinner';
 import SocialMedia from './SocialMedia';
 import ContactDetails from './ContactDetails';
 import ContactForm from './ContactForm';
+import { Alert } from 'react-bootstrap';
 
 const Contact = () => {
   const { userId } = useSelector((state) => state.auth)
-  const { data: info, isLoading } = useGetPersonalInfoQuery(userId);
+  const { data: info, isLoading, isError } = useGetPersonalInfoQuery(userId);
 
   return (
     <Container fluid className='contact py-3'>
       <h1 className="heading">contact <span>me</span></h1>
       { isLoading ?
         <CustomSpinner /> :
+        (isError) ?
+        <Alert variant="danger" className="text-center">
+            <Alert.Heading>Error</Alert.Heading>
+            <p>There was an error loading resources. Please reload.</p>
+        </Alert> :
         <>
           <Row className='Row px-5'>
             <Col className='mb-3 info-container' sm={12} md={6} lg={5}>

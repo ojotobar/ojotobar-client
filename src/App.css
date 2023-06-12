@@ -200,6 +200,10 @@ html::-webkit-scrollbar-thumb {
   color: #aaa;
   font-weight: lighter;
 }
+.Row .info .box-container .box h3 a {
+  text-decoration: none;
+  color: #aaa;
+}
 .Row .count-container {
   flex: 1 1 42rem;
   display: flex;

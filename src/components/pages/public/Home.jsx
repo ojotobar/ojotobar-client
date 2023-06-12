@@ -8,23 +8,29 @@ import { useGetUserDetailsQuery } from '../../../features/api/userApi';
 import { useDispatch } from 'react-redux';
 import { setUserId } from '../../../features/auth/authSlice';
 import CustomSpinner from '../../common/CustomSpinner';
+import { Alert } from 'react-bootstrap';
 
 const Home = () => {
   const dispatch = useDispatch();
   
-  const { data: user, isLoading, isSuccess } = useGetUserDetailsQuery();
+  const { data: user, isLoading, isSuccess, isError } = useGetUserDetailsQuery();
   const middleInitial = user?.middleName ? `${user?.middleName[0]}.` : '';
   useEffect(() => {
     if(isSuccess || user){
         dispatch(setUserId(user?.id));
     }
 
-}, [user, isSuccess, dispatch]);
+  }, [user, isSuccess, dispatch]);
 
   return (
     <Container fluid className='home'>
         { isLoading ? 
           <CustomSpinner /> :
+          (isError) ?
+          <Alert variant="danger" className="text-center">
+            <Alert.Heading>Error</Alert.Heading>
+            <p>There was an error loading resources. Please reload.</p>
+          </Alert> :
           <>
             <Row className='sectioned centered'>
               <Col className='image mb-5' md={12} lg={6}>
