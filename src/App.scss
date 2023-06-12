@@ -364,7 +364,7 @@ html {
             img {
                 height: 100%;
                 width: 100%;
-                object-fit: cover;
+                //object-fit: cover;
             }
 
             .content {
@@ -394,6 +394,11 @@ html {
                     font-size: 1.5rem;
                     line-height: 2;
                     color: $light-color;
+
+                    span {
+                        color: $crimson;
+                        font-weight: bold;
+                    }
                 }
 
                 a {
@@ -423,6 +428,16 @@ html {
         }
 
         p {
+            a {
+                font-size: 1.5rem;
+                line-height: 2;
+                color: $light-color;
+                padding: 1rem 0;
+                text-decoration: none;
+            }
+        }
+
+        .add {
             font-size: 1.5rem;
             line-height: 2;
             color: $light-color;
@@ -469,9 +484,8 @@ html {
                 border-radius: 1rem;
                 padding: 1.2rem 1.8rem;
                 font-size: 1.6rem;
-                color: $crimson !important;
+                color: $white;
                 background: $lighter-bg;
-                text-transform: uppercase;
                 outline: $crimson;
                 border: 1px solid $crimson;
             }

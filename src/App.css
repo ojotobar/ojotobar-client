@@ -306,8 +306,6 @@ html::-webkit-scrollbar-thumb {
 .portfolio .box-container .box img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .portfolio .box-container .box .content {
   position: absolute;
@@ -336,6 +334,10 @@ html::-webkit-scrollbar-thumb {
   line-height: 2;
   color: #aaa;
 }
+.portfolio .box-container .box .content p span {
+  color: crimson;
+  font-weight: bold;
+}
 .portfolio .box-container .box .content a {
   font-size: 2rem;
   color: crimson;
@@ -355,7 +357,14 @@ html::-webkit-scrollbar-thumb {
   color: #fff;
   padding-bottom: 1rem;
 }
-.Row .info-container p {
+.Row .info-container p a {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #aaa;
+  padding: 1rem 0;
+  text-decoration: none;
+}
+.Row .info-container .add {
   font-size: 1.5rem;
   line-height: 2;
   color: #aaa;
@@ -391,9 +400,8 @@ html::-webkit-scrollbar-thumb {
   border-radius: 1rem;
   padding: 1.2rem 1.8rem;
   font-size: 1.6rem;
-  color: crimson !important;
+  color: #fff;
   background: #1d1d1d;
-  text-transform: uppercase;
   outline: crimson;
   border: 1px solid crimson;
 }

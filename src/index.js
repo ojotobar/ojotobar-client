@@ -6,25 +6,23 @@ import App from './App';
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import persistStore from 'redux-persist/es/persistStore';
-//import { PersistGate } from 'redux-persist/integration/react';
-import { ToastContainer } from 'react-toastify';
+import persistStore from 'redux-persist/es/persistStore';
+import { PersistGate } from 'redux-persist/integration/react';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
-//const persistor = persistStore(store);
+const persistor = persistStore(store);
 
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      {/* <PersistGate persistor={persistor}> */}
+      <PersistGate persistor={persistor}>
         <BrowserRouter>
           <Routes>
             <Route path='/*' element={<App />} />
           </Routes>
         </BrowserRouter>
-      {/* </PersistGate> */}
-      <ToastContainer />
+      </PersistGate>
     </Provider>
   </React.StrictMode>
 );
