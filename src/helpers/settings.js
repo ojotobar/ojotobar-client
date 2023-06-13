@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3500';
+export const BASE_URL = 'https://exuberant-lamb-long-underwear.cyclic.app';
 
 export const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
