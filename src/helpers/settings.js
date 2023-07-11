@@ -46,7 +46,7 @@ export const gradCapIconStyles = {
     lineHeight: '4.5rem',
     fontSize: '1.7rem',
     borderRadius: '50%',
-    background: 'crimson',
+    background: '#00001c',
     color: 'white',
     textAlign: 'center',
     position: 'absolute',
@@ -56,12 +56,12 @@ export const gradCapIconStyles = {
 
   export const smIconStyles = {
     fontSize: '3rem',
-    color: 'crimson',
+    color: '#00001c',
     paddingTop: '.5rem'
   }
 
  export const btnStyles = {
-    background: 'crimson',
+    background: '#00001c',
     padding: '1rem 2rem',
     border: 'none',
     outline: 'none',

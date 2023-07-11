@@ -11,7 +11,7 @@
 }
 
 .icon {
-  color: crimson;
+  color: #00001c;
 }
 .icon:hover {
   color: #fff;
@@ -24,7 +24,7 @@
   font-size: 1.7rem;
   text-align: center;
   background: #fff;
-  color: crimson;
+  color: #00001c;
   border-radius: 50%;
   margin-left: 1rem;
   transition: 0.2s linear;
@@ -47,21 +47,21 @@ html::-webkit-scrollbar {
   width: 1rem;
 }
 html::-webkit-scrollbar-track {
-  background: #0d0d0d;
+  background: #2866a1;
 }
 html::-webkit-scrollbar-thumb {
-  background: crimson;
+  background: #00001c;
   border-radius: 5rem;
 }
 
 .App {
-  background: #0d0d0d;
+  background: #2866a1;
   min-height: 90vh;
   margin: 0;
 }
 
 .navbar {
-  background: #1a1a1a;
+  background: #03254c;
   bottom: 0;
   margin: 0 !important;
   height: 10vh;
@@ -72,13 +72,13 @@ html::-webkit-scrollbar-thumb {
   align-items: flex-end;
 }
 .navbar i {
-  color: crimson;
+  color: #00001c;
   padding-right: 0.5rem;
 }
 .navbar a {
   padding: 2rem;
   font-size: 2rem;
-  background: #1a1a1a;
+  background: #03254c;
   flex: 1;
   color: #fff;
   text-align: center;
@@ -87,7 +87,7 @@ html::-webkit-scrollbar-thumb {
   min-height: 100%;
 }
 .navbar a:hover {
-  background: crimson;
+  background: #00001c;
 }
 .navbar a:hover i {
   color: #fff;
@@ -101,7 +101,7 @@ html::-webkit-scrollbar-thumb {
 .Btn {
   margin-top: 1.7rem;
   border-radius: 5rem;
-  background: crimson !important;
+  background: #00001c !important;
   padding: 0.9rem;
   font-size: 1.7rem;
   color: #fff !important;
@@ -170,7 +170,7 @@ html::-webkit-scrollbar-thumb {
 }
 .heading span {
   text-transform: uppercase;
-  color: crimson;
+  color: #00001c;
 }
 
 .Row .info {
@@ -214,12 +214,12 @@ html::-webkit-scrollbar-thumb {
   flex: 1 1 20rem;
   padding: 3rem 4rem;
   border-radius: 0.5rem;
-  background: #1a1a1a;
+  background: #03254c;
   box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.7);
 }
 .Row .count-container .box h3 {
   font-size: 5rem;
-  color: crimson;
+  color: #00001c;
 }
 .Row .count-container .box p {
   padding-top: 1rem;
@@ -238,13 +238,13 @@ html::-webkit-scrollbar-thumb {
   text-align: center;
   box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.7);
   border-radius: 0.5rem;
-  background: #1a1a1a;
+  background: #03254c;
 }
 .skills .box-container .box:hover {
-  background: crimson;
+  background: #00001c;
 }
 .skills .box-container .box:hover h3 {
-  color: #0d0d0d;
+  color: #2866a1;
 }
 .skills .box-container .box img {
   height: 7rem;
@@ -276,7 +276,7 @@ html::-webkit-scrollbar-thumb {
   color: #fff;
   border-radius: 5rem;
   padding: 0.5rem 1.5rem;
-  background: #1a1a1a;
+  background: #03254c;
 }
 .education .box-container h3 {
   font-size: 2rem;
@@ -317,7 +317,7 @@ html::-webkit-scrollbar-thumb {
   left: 0;
   height: 100%;
   width: 100%;
-  background: #1a1a1a;
+  background: #03254c;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -339,12 +339,12 @@ html::-webkit-scrollbar-thumb {
   color: #aaa;
 }
 .portfolio .box-container .box .content p span {
-  color: crimson;
+  color: #00001c;
   font-weight: bold;
 }
 .portfolio .box-container .box .content a {
   font-size: 2rem;
-  color: crimson;
+  color: #00001c;
 }
 .portfolio .box-container .box .content a:hover {
   color: #fff;
@@ -393,21 +393,21 @@ html::-webkit-scrollbar-thumb {
   padding: 1rem;
   line-height: 4.5rem;
   border-radius: 50%;
-  background: #1a1a1a;
+  background: #03254c;
   color: #fff;
   margin-right: 1.7rem;
 }
 .Row .info-container .share a:hover {
-  background: crimson;
+  background: #00001c;
 }
 .Row form .inputBox input, .Row form .inputBox textarea {
   border-radius: 1rem;
   padding: 1.2rem 1.8rem;
   font-size: 1.6rem;
   color: #fff;
-  background: #1d1d1d;
-  outline: crimson;
-  border: 1px solid crimson;
+  background: #d0d0d0;
+  outline: #00001c;
+  border: 1px solid #00001c;
 }
 .Row form .inputBox textarea {
   width: 100%;
@@ -433,7 +433,7 @@ html::-webkit-scrollbar-thumb {
   }
   .navbar a i {
     padding: 0;
-    color: #0d0d0d;
+    color: #2866a1;
   }
   .navbar a span {
     display: none;

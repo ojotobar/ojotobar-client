@@ -13,7 +13,7 @@ const CustomSpinner = () => {
 
   return (
     <Row style={styles}>
-        <Spinner animation='border' size='lg' variant='danger' style={{ width: '5rem', height: '5rem' }}/>
+        <Spinner animation='border' size='lg' variant='#00001c' style={{ width: '5rem', height: '5rem' }}/>
     </Row>
   )
 }

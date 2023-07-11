@@ -11,12 +11,12 @@
     text-transform: capitalize;
 }
 
-$crimson: crimson;
-$black: #0d0d0d;
-$light-bg: #1a1a1a;
+$crimson: #00001c;
+$black: #2866a1;
+$light-bg: #03254c;
 $white: #fff;
 $light-color: #aaa;
-$lighter-bg: #1d1d1d;
+$lighter-bg: #d0d0d0;
 $box-shadow: 0.5rem 1rem rgba(0, 0, 0, .7);
 
 @mixin grid($val) {
